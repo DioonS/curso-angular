@@ -23,7 +23,7 @@ export class OutputPropertyComponent {
 
   decrementa() {
     //this.campoValorInput.nativeElement.value--;
-    this.valor++;
+    this.valor--;
     this.mudouValor.emit({ novoValor: this.valor })
   }
 }
