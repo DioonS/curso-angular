@@ -1,0 +1,31 @@
+<!--Usando Bootstrap 3 para importar os icons funciona perfeitamente ambos os códigos-->
+
+<h1>
+    <i class="glyphicon" [class.glyphicon-star-empty]="!meuFavorito"
+    [class.glyphicon-star]="meuFavorito" (click)="onClick()"></i>
+</h1>
+
+<h1>
+    <i class="glyphicon"
+    [ngClass]="{
+        'glyphicon-star-empty': !meuFavorito,
+        'glyphicon-star':meuFavorito
+    }" 
+    (click)="onClick()"></i>
+</h1>
+
+<!--Com o trecho de codigo abaixo não funciona os icons do bootstrap 5-->
+<!--<h1>
+    <i class="bi bi-star-fill" [class.bi bi-star-fill]="!meuFavorito"
+    [class.bi bi-star]="meuFavorito" (click)="onClick()"></i>
+</h1>-->
+
+<!--Com o trecho de código abaixo (usando ngClass) funciona o bootstrap 5-->
+<h1>
+    <i class="bi bi-star-fill"
+    [ngClass]="{
+        'bi bi-star-fill': !meuFavorito,
+        'bi bi-star': meuFavorito
+    }"
+    (click)="onClick()"></i>
+</h1>
