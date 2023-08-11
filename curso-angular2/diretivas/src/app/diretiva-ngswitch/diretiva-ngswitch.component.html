@@ -27,7 +27,7 @@
 </nav>
 
 <div class="container" [ngSwitch]="aba">
+    <p *ngSwitchDefault>Home</p>
     <p *ngSwitchCase="'mapa'">Modo Mapa ativado.</p>
     <p *ngSwitchCase="'lista'">Modo Lista ativado.</p>
-    <p *ngSwitchDefault>Home</p>
 </div>
