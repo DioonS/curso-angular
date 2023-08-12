@@ -4,3 +4,10 @@
 <br>
 
 <p appHighlightMouse>Texto com highlight quando passo o mouse</p>
+
+<!-- há maneiras de melhorar o código abaixo -->
+<!--<p appHighlight [defaultColor]="'gray'" [highlighColor]="'red'">Texto com highlight com cores customizadas</p>-->
+
+<!-- Melhorando o código acima -->
+<p [appHighlight]="'red'" [defaultColor]="'grey'">Texto com highlight com cores customizadas</p>
+
