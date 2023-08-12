@@ -1,13 +1,26 @@
-<p appFundoAmarelo>Texto com fundo amarelo.</p>
+<!--<p appFundoAmarelo>Texto com fundo amarelo.</p>
 <button appFundoAmarelo>Botão com fundo amarelo</button>
 
 <br>
 
-<p appHighlightMouse>Texto com highlight quando passo o mouse</p>
+<p appHighlightMouse>Texto com highlight quando passo o mouse</p>-->
 
 <!-- há maneiras de melhorar o código abaixo -->
 <!--<p appHighlight [defaultColor]="'gray'" [highlighColor]="'red'">Texto com highlight com cores customizadas</p>-->
 
 <!-- Melhorando o código acima -->
-<p [appHighlight]="'red'" [defaultColor]="'grey'">Texto com highlight com cores customizadas</p>
+<!--<p [appHighlight]="'red'" [defaultColor]="'grey'">Texto com highlight com cores customizadas</p>-->
 
+<div *ngElse="mostrarCursos">
+    Lista de cursos aqui.
+</div>
+
+<div *ngElse="!mostrarCursos">
+    Não existem cursos para serem listados.
+</div>
+
+<br>
+
+<button (click)="onMostrarCursos()">Mostrar ou esconder Cursos</button>
+
+<br>
