@@ -1,0 +1,10 @@
+<h5>Exemplos de pipes:</h5>
+
+<p>Título: {{ livro.title | uppercase }}</p> <!--Pipe de transformação-->
+<p>Estrelas: {{ livro.rating | number:'1.1-1' }}</p> <!--Mostrar apenas duas casas decimais defina number e os argumentos após os :-->
+<p>Páginas: {{ livro.numeroPaginas | number }}</p>
+<p>Preço: {{ livro.preco | currency:'BRL':true }}</p> <!--Use o currency para moeda, também da para passar argumentos após : exemplo currency:'BRL' para que fique com o R$ basta colocar :true após o BRL-->
+<p>Data de Lançamento: {{ livro.dataLancamento | date:'dd/MM/yyyy' }}</p>
+<p>Url: {{ livro.url }}</p>
+<br>
+<p>Livro: {{ livro | json }}</p>
