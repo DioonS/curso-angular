@@ -9,7 +9,6 @@
 <br>
 <p>Livro: {{ livro | json }}</p>
 
-
 <input type="text" [(ngModel)]="filtro">
 
 <input type="text" #novoValor>
@@ -20,3 +19,7 @@
         {{ liv }}
     </li>
 </ul>
+
+<p>{{ valorAsync | async }}</p>
+
+<p>Async: {{ valorAsync2 | async }}</p>
