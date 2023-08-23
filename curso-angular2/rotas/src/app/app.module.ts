@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { LoginComponent } from './login/login.component';
-import { routing } from './app.routing';
+//import { routing } from './app.routing';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import { CursosService } from './cursos/cursos.service';
 import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
@@ -24,7 +24,7 @@ import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-en
   imports: [
     BrowserModule,
     AppRoutingModule,
-    routing
+    //routing
   ],
   providers: [CursosService],
   bootstrap: [AppComponent]
