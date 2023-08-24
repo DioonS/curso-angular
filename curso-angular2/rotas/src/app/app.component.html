@@ -4,7 +4,7 @@
     <ul id="nav-mobile" class="left hide-on-med-and-down">
       <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
       <li routerLinkActive="active"><a routerLink="/cursos" [queryParams]="{ pagina:1 }">Cursos</a></li>
-      <li routerLinkActive="active"><a [routerLink]="['curso', idCurso.value]">Curso com id</a></li>
+      <!--<li routerLinkActive="active"><a [routerLink]="['curso', idCurso.value]">Curso com id</a></li>-->
       <li routerLinkActive="active"><a routerLink="/alunos">Alunos</a></li>
 
     </ul>
@@ -12,8 +12,8 @@
 </nav>
 
 <div class="container">
-  <h4>Informe o id do curso</h4>
-  <input #idCurso>
+  <!--<h4>Informe o id do curso</h4>
+  <input #idCurso>-->
   <router-outlet></router-outlet>
 </div>
 
