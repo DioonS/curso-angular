@@ -11,10 +11,14 @@ const appRoutes: Routes = [
     { path: 'cursos',
         loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule), // configurando lazy loading
         canActivate: [AuthGuard], // Configuração de Guarda de Rotas
-        canActivateChild: [CursosGuard]}, // Configuração de Guarda de Rotas Filhas
+        canActivateChild: [CursosGuard],
+        canLoad: [AuthGuard] // Configurando o canLoad
+    }, // Configuração de Guarda de Rotas Filhas
     { path: 'alunos', 
         loadChildren: () => import('./alunos/alunos.module').then(m => m.AlunosModule),
-        canActivate: [AuthGuard]},
+        canActivate: [AuthGuard],
+        canLoad: [AuthGuard]
+    },
     { path: 'login', component: LoginComponent },
     { path: '', component: HomeComponent, canActivate: [AuthGuard] }
 ];
