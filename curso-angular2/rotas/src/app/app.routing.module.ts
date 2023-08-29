@@ -6,6 +6,7 @@ import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
 import { AuthGuard } from './guards/auth-guard';
 import { CursosGuard } from './guards/cursos.guard';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 
 const appRoutes: Routes = [
     { path: 'cursos',
@@ -20,7 +21,9 @@ const appRoutes: Routes = [
         canLoad: [AuthGuard]
     },
     { path: 'login', component: LoginComponent },
-    { path: '', component: HomeComponent, canActivate: [AuthGuard] }
+    { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: '', redirectTo: '/home', pathMatch: 'full' }, // redirecionando o usuario para home caso seja uma rota vazia
+    { path: '**', component: PaginaNaoEncontradaComponent } // Configurando rota não encontrada (404)
 ];
 
 
